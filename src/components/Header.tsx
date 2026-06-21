@@ -8,12 +8,13 @@ export default function Header() {
 
   const navLinks = [
     { to: "/", label: "Главная" },
-    { to: "/estimator", label: "Калькулятор сметы" },
-    { to: "/machinery", label: "Диспетчерская техники" },
+    { to: "/estimator", label: "Сметы" },
+    { to: "/machinery", label: "Техника" },
   ];
 
   return (
     <header style={{ background: "var(--brand-dark)" }} className="sticky top-0 z-50 shadow-xl">
+      <div className="hazard-bg h-1 w-full" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -22,10 +23,10 @@ export default function Header() {
               style={{ background: "var(--brand-gold)", color: "var(--brand-dark)" }}
               className="w-8 h-8 flex items-center justify-center font-display font-bold text-sm"
             >
-              СР
+              ВС
             </div>
-            <span className="font-display text-white text-lg font-semibold tracking-wide hidden sm:block">
-              СтройРяд<span style={{ color: "var(--brand-gold)" }}>.РФ</span>
+            <span className="font-display text-white text-base font-semibold tracking-wide hidden sm:block">
+              ВСЁ О СТРОЙКЕ<span style={{ color: "var(--brand-gold)" }}>.РФ</span>
             </span>
           </Link>
 
@@ -47,10 +48,18 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="tel:89929999777"
+              className="flex items-center gap-1.5 text-sm font-body font-semibold transition-colors hover:opacity-80"
+              style={{ color: "rgba(255,255,255,0.85)" }}
+            >
+              <Icon name="Phone" size={15} />
+              8 992 999 97 77
+            </a>
             <Link
               to="/estimator"
-              className="px-5 py-2 text-sm font-body font-semibold transition-all duration-200 hover:opacity-90"
+              className="px-5 py-2 text-sm font-body font-bold transition-all duration-200 hover:opacity-90"
               style={{ background: "var(--brand-gold)", color: "var(--brand-dark)" }}
             >
               Рассчитать смету →

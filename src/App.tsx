@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "@/components/Header";
-import Home from "@/components/Home";
+import Portal from "@/components/Portal";
 import Estimator from "@/components/Estimator";
 import Machinery from "@/components/Machinery";
 import NotFound from "./pages/NotFound";
@@ -19,7 +19,7 @@ const App = () => (
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Portal />} />
           <Route path="/estimator" element={<Estimator />} />
           <Route path="/machinery" element={<Machinery />} />
           <Route path="*" element={<NotFound />} />
